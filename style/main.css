@@ -1,0 +1,44 @@
+.sr_only{
+    position: absolute;
+    top: -9999px;
+    font-size: 0;
+    height: 0;
+}
+.input_wrap{
+    position:relative;
+    width:512px;
+    padding-right:137px;
+}
+label{
+    font-size:14px;
+    font-weight:500;
+    height:20px;
+}
+.input_box{
+    position:relative;
+}
+.input_box .input_info{
+    width:100%;
+    margin-top:4px;
+    padding:13px 50px 13px 16px;
+    border:2px solid #222;
+    box-sizing:border-box;
+    border-radius:10px;
+}
+.input_box .btn_del{
+    position:absolute;
+    top:50%;
+    right:20px;
+    width:24px;
+    height:24px;
+    margin-top:-12px;
+    background:url(/img/btn_del.svg) no-repeat;
+    border:0;
+}
+.btn{
+    position:absolute;
+    bottom:0;
+    right:0;
+    width:100px;
+    height:45px;
+}
