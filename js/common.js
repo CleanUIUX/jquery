@@ -14,10 +14,10 @@ var ui = {
                 }
                 // 글자수 제한
                 const inputLength = $(this).val().length;
-                if($(this).val().length > 13){
+                if($(this).val().length > 12){
                     $(this).val($(this).val().substring(0, 13));
 
-                    $('.btn').addClass("on");
+                    $('.input_btn').addClass("on");
                 }
                 // 하이픈 적용
                 $(this).val($(this).val().replace(/[^0-9]/g, "").replace(/(^02|^0505|^1[0-9]{3}|^0[0-9]{2})([0-9]+)?([0-9]{4})$/,"$1-$2-$3").replace("--", "-") );
