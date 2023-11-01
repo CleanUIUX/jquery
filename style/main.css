@@ -32,7 +32,7 @@ label{
     width:24px;
     height:24px;
     margin-top:-12px;
-    background:url(/img/btn_del.svg) no-repeat;
+    background:url(../img/btn_del.svg) no-repeat;
     border:0;
 }
 .btn{
