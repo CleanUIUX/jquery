@@ -42,3 +42,6 @@ label{
     width:100px;
     height:45px;
 }
+.btn.on{
+    background-color:tan;
+}
