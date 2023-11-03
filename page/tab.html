@@ -13,24 +13,24 @@
 <body>
     <header>
         <ul class="main_tab">
-            <li data-btn-sid="sect_1">
-                <a href="javascript:;" role="button" class="bt">TAB1</a>
+            <li>
+                <a href="javascript:;" role="button" onclick="fnMove('1')" class="bt">TAB1</a>
                 <ul class="sub_tab">
                     <li>1</li>
                     <li>2</li>
                     <li>3</li>
                 </ul>
             </li>
-            <li data-btn-sid="sect_2">
-                <a href="javascript:;" role="button" class="bt">TAB2</a>
+            <li>
+                <a href="javascript:;" role="button" onclick="fnMove('2')" class="bt">TAB2</a>
                 <ul class="sub_tab">
                     <li>1</li>
                     <li>2</li>
                     <li>3</li>
                 </ul>
             </li>
-            <li data-btn-sid="sect_3">
-                <a href="javascript:;" role="button" class="bt">TAB3</a>
+            <li>
+                <a href="javascript:;" role="button" onclick="fnMove('3')" class="bt">TAB3</a>
                 <ul class="sub_tab">
                     <li>1</li>
                     <li>2</li>
@@ -40,15 +40,15 @@
         </ul>
     </header>
     <!-- TAB1 -->
-    <section class="sect">
+    <section id="div1">
         <h2>TAB1</h2>
     </section>
     <!-- TAB2 -->
-    <section class="sect">
+    <section id="div2">
         <h2>TAB2</h2>
     </section>
     <!-- TAB3 -->
-    <section class="sect">
+    <section id="div3">
         <h2>TAB3</h2>
     </section>
 </body>

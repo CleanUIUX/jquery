@@ -4,7 +4,7 @@ var ui = {
         ui.common.tabs.evt();
     },
     common: {
-        bindEvents : function(){
+        bindEvents : function(){ 
             // 인풋 텍스트 입력 시 삭제버튼 생성
             $('.input_box').find('.btn_del').hide();
             $('.input_info').on('focus change keyup paste', function(e){
@@ -37,18 +37,20 @@ var ui = {
         },
         //  tabs
         tabs: {
-            evt: function(){
+            evt : function fnMove(seq){
+                var offset = $('#div' + seq).offset();
+                $('html, body').animate({scrollTop : offset.top}, 400);
                 // 클릭 시 스크롤 이동
-                var _this = this;
-                $(document).on('click', '.main_tab > li .bt', function(){
-                    var id = $(this).closest("li").data("btn-sid");
-                    _this.goto(id);
-                });
-            },
-            goto: function(id){
-                var test = $("[data-sid="+id+"]").offset().top;
-                console.log(test);
+                // var _this = this;
+                // $(document).on('click', '.main_tab > li .bt', function(){
+                //     var id = $(this).closest("li").data("btn-sid");
+                //     _this.goto(id);
+                // });
             }
+            // goto: function(id){
+            //     var test = $("[data-sid="+id+"]").offset().top;
+                
+            // }
         }
     }
 }
