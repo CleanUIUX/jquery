@@ -52,41 +52,41 @@ $(document).ready(function(){
         // 부드럽게 이동
         $('html, body').animate({
             scrollTop: $($.attr(this, 'href')).offset().top
+        }, 400);    
+    });
+
+    // target 위치 표시 및 이동
+    var sections = $(".sect"),
+    nav = $('.main_tab'),
+    nav_height = nav.outerHeight();
+
+    $(window).on('scroll', function(){
+        var cur_pos = $(this).scrollTop();
+        
+        sections.each(function(){
+            var top = $(this).offset().top - nav_height,
+                bottom = top + $(this).outerHeight();
+            
+            if(cur_pos >= top && cur_pos <= bottom){
+                nav.find('a').parent().removeClass("on");
+                sections.removeClass("active");
+
+                $(this).parent().addClass("on");
+                nav.find('a[href="#' + $(this).attr('id') + '"]').parent().addClass("on");
+            }
+        });
+    });
+
+    nav.find('a').on("click", function(){
+        var $el = $(this),
+            id = $el.attr('href');
+        
+        $('html, body').animate({
+            scrollTop: $(id).offset().top
         }, 400);
 
-        // target 위치 표시 및 이동
-        var sections = $(".sect"),
-            nav = $('.main_tab'),
-            nav_height = nav.outerHeight();
-
-        $(window).on('scroll', function(){
-            var cur_pos = $(this).scrollTop();
-            
-            sections.each(function(){
-                var top = $(this).offset().top - nav_height,
-                    bottom = top + $(this).outerHeight();
-                
-                if(cur_pos >= top && cur_pos <= bottom){
-                    nav.find('a').parent().removeClass("on");
-                    sections.removeClass("active");
-
-                    $(this).parent().addClass("on");
-                    nav.find('a[href="#' + $(this).attr('id') + '"]').parent().addClass("on");
-                }
-            });
-        });
-
-        // nav.find('a').on("click", function(){
-        //     var $el = $(this),
-        //         id = $el.attr('href');
-            
-        //     $('html, body').animate({
-        //         scrollTop: $(id).offset().top
-        //     }, 400);
-
-        //     return false;
-        // })
-    })
+        return false;
+    });
 })
 
 
