@@ -9,7 +9,7 @@ label{font-size:14px;font-weight:500;height:20px;}
 .input_btn.on{background-color:tan;}
 
 /* tab */
-section{height:600px;border-top:1px solid #222;}
+section{width:100%;height:100vh;border-top:1px solid #222;}
 header{position:fixed;top:0;left:0;z-index:10;width:100%;height:100px;line-height:100px;}
 header .main_tab{display:flex;height:100px;text-align:center;}
 .main_tab > li{width:33.3%;border:1px solid rebeccapurple;}
