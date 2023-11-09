@@ -779,3 +779,71 @@ var ui = {
 $(function(){
     ui.init();
 })
+
+
+
+
+
+
+// sample2
+        // [D] 221125 최근 메뉴 유동적으로 변경 --s
+        function menuHeight(){
+            var $userHeight = $('.all_menu_wrap .user_info').outerHeight();
+
+            $('.all_menu_wrap .all_menu_area').css('top',$userHeight);
+        }
+
+        menuHeight();
+        // [D] 221125 최근 메뉴 유동적으로 변경 --e
+        
+        // 전체메뉴
+        $('.menu_list li').on('click',function(e){
+            var $this = $(this);
+            var $con = $('.sub_menu > ul > li')
+            var $index = $this.index();
+            var $total=0;
+
+            for(i = 0; i < $index; i++){ 
+                $total += $con.eq(i).outerHeight(true);
+            }
+
+            var $offset = $con.eq($index).offset().top - 246; // [D] 221020 수정
+            
+            if($index == 0){
+                $('.sub_menu').stop().delay(100).animate({scrollTop:0}, 400);
+            }else{
+                $('.sub_menu').stop().delay(100).animate({scrollTop:$total+20}, 400);
+            }                
+        
+            e.preventDefault();
+        });
+
+        $('.sub_menu').on('scroll',function(){
+
+            var $this = $(this);
+            var $con = $this.find('> ul > li')
+            var $nav = $('.menu_list li');
+            var $subTop = $this.scrollTop();
+            var $len = $con.length;
+
+            for(i = 0; i < $len; i++){ 
+                if($con.eq(i).offset().top < 246){ // [D] 221020 수정
+                    $nav.removeClass('active');
+                    $nav.eq(i).addClass('active');
+                }
+            }     
+
+        });
+
+        function conHeight(){
+            var $con = $('.sub_menu');
+            var $wh = $(window).height();
+            var $h = $wh - 300;            
+            $con.css('padding-bottom',$h);
+        }
+        conHeight();
+
+        $(window).resize(function(){
+            conHeight();
+        });
+// 
