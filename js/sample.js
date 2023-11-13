@@ -785,7 +785,7 @@ $(function(){
 
 
 
-// sample2
+// sample2(효빈님)
         // [D] 221125 최근 메뉴 유동적으로 변경 --s
         function menuHeight(){
             var $userHeight = $('.all_menu_wrap .user_info').outerHeight();

@@ -9,11 +9,11 @@ label{font-size:14px;font-weight:500;height:20px;}
 .input_btn.on{background-color:tan;}
 
 /* tab */
-section{width:100%;height:100vh;border-top:1px solid #222;}
-header{position:fixed;top:0;left:0;z-index:10;width:100%;height:100px;line-height:100px;}
-header .main_tab{display:flex;height:100px;text-align:center;}
-.main_tab > li{width:33.3%;border:1px solid rebeccapurple;}
-.main_tab > li.on{background-color:skyblue;}
-.main_tab > li .bt{display:block;}
-
-.sub_tab{display:none;}
+.all_menu_area{position:relative;}
+.all_menu_area .menu_list{position:absolute;top:20px;right:20px;}
+.all_menu_area .menu_list li{width:100px;height:50px;margin-top:4px;border:1px solid #222;border-radius:10px;line-height:50px;}
+.all_menu_area .menu_list li a{display:inline-block;width:100%;height:100%;color:#222; text-align:center;text-decoration:none;}
+.all_menu_area .sub_menu ul li{height:100vh;}
+.all_menu_area .sub_menu ul li:nth-child(1){background-color:aliceblue;}
+.all_menu_area .sub_menu ul li:nth-child(2){background-color: blanchedalmond;}
+.all_menu_area .sub_menu ul li:nth-child(3){background-color: tomato;}
