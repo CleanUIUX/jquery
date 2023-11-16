@@ -5,20 +5,47 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>input</title>
+    <link rel="stylesheet" href="../style/reset.css">
     <link rel="stylesheet" href="../style/main.css">
     <script src="../js/jquery-3.7.0.min.js"></script>
     <script src="../js/common.js"></script>
 </head>
 <body>
-    <div class="input_wrap">
-        <label for="">번호 입력시 버튼 on</label>
-        <div class="input_box">
-            <input id="user_info" class="input_info phoneNumber" type="text">
-            <button class="btn_del" type="button">
-                <span class="sr_only">삭제</span>
-            </button>
+    <div class="wrap">
+        <p class="top_tit"><span>Guide</span></p>
+    </div>
+    <div class="g_contatiner">
+        <div class="g_item">
+            <h3 class="g_title">Form - input</h3>
+            <!-- 번호 입력시 버튼 on -->
+            <div class="g_content type1">
+                <h4 class="g_tit_sub">번호 입력시 버튼 on</h4>
+                <div class="input_wrap">
+                    <div class="input_box">
+                        <input id="user_info" class="input_info phoneNumber" type="text">
+                        <button class="btn_del" type="button">
+                            <span class="sr_only">삭제</span>
+                        </button>
+                    </div>
+                    <button class="input_btn" type="button">버튼</button>
+                </div>
+            </div>
+            <!-- 클릭 시 info on -->
+            <div class="g_content type2">
+                <h4 class="g_tit_sub">클릭 시 info on</h4>
+                <div class="btn_search">
+                    <button type="button">이곳을 클릭하세요</button>
+                </div>
+                <div class="input_wrap">
+                    <div class="input_box">
+                        <input id="user_info" class="input_info" type="text">
+                        <button class="btn_del" type="button">
+                            <span class="sr_only">삭제</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
         </div>
-        <button class="input_btn" type="button">버튼</button>
     </div>
 </body>
 </html>

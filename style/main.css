@@ -1,12 +1,24 @@
 .sr_only{position: absolute;top: -9999px;font-size: 0;height: 0;}
+/* guide */
+p.top_tit{z-index:50;position:fixed;top:0;width:100%;padding:16px 0;background-color:#222;text-align:center;color:#fff;}
+.g_contatiner{padding:100px 20px 50px;background: color #f7f7f7;}
+.g_content{margin-top:30px;}
+div.g_item{padding:24px;border:1px solid rgba(0, 0, 0, .2);border-radius:5px;background-color:#fff;}
+div.g_item > .g_title{margin-bottom:10px;padding-bottom:8px;border-bottom:1px solid rgba(0, 0, 0, .2);color:rgba(0, 0, 0, .3);font-size:20px;}
 /* input */
-.input_wrap{position:relative;width:512px;padding-right:137px;}
+.type1 .input_wrap{position:relative;display:flex;align-items:center;padding-right:137px;margin-top:10px;}
 label{font-size:14px;font-weight:500;height:20px;}
-.input_box{position:relative;}
-.input_box .input_info{width:100%;margin-top:4px;padding:13px 50px 13px 16px;border:2px solid #222;box-sizing:border-box;border-radius:10px;}
-.input_box .btn_del{position:absolute;top:50%;right:20px;width:24px;height:24px;margin-top:-12px;background:url(../img/btn_del.svg) no-repeat;border:0;}
-.input_btn{position:absolute;bottom:0;right:0;width:100px;height:45px;}
-.input_btn.on{background-color:tan;}
+.type1 .input_box{position:relative;width:400px;}
+.type1 .input_box .input_info{width:100%;margin-top:4px;padding:13px 50px 13px 16px;border:2px solid #222;box-sizing:border-box;border-radius:10px;}
+.type1 .input_box .btn_del{position:absolute;top:50%;right:20px;width:24px;height:24px;margin-top:-12px;background:url(../img/btn_del.svg) no-repeat;border:0;}
+.type1 .input_btn{width:100px;height:45px;margin-left:30px;}
+.type1 .input_btn.on{background-color:tan;}
+
+.type2{position:relative;}
+.type2 .btn_search{margin-top:10px;}
+.type2 .input_wrap{display:none;}
+.type2 .input_wrap.on{display:block;}
+.type2 .input_wrap .input_info{width:100%;margin-top:10px;padding:13px 50px 13px 16px;border:2px solid #222;box-sizing:border-box;border-radius:10px;}
 
 /* tab */
 .all_menu_area{position:relative;}
