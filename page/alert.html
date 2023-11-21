@@ -19,7 +19,7 @@
             <h3 class="g_title">Alert popup</h3>
             <div class="g_content">
                 <p class="g_underline">
-                    <button type="button" >
+                    <button type="button" aria-haspopup="dialog" class="pop_name1" onclick="ui.common.popupFn.open('pop_name1')">
                         본문 + 버튼 2개
                     </button>
                 </p>
@@ -27,15 +27,15 @@
         </div>
     </div>
     <!-- popup sample -->
-    <div>
+    <div id="pop_name1" class="layer_wrap alert_pop type_s" role="dialog">
         <div class="pop_con">
             <div class="inner">
                 <div class="txt">
                     접수가 정상적으로 완료되었습니다.<br>소중한 의견 감사합니다.
                 </div>
                 <div class="btn_wrap">
-                    <button type="button"></button>
-                    <button type="button"></button>
+                    <button type="button" class="btn_type2" onclick="ui.common.popupFn.open('pop_name1')">버튼명</button>
+                    <button type="button" class="btn_type">버튼명</button>
                 </div>
             </div>
             <div class="dim"></div>
