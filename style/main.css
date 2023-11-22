@@ -24,7 +24,7 @@ label{font-size:14px;font-weight:500;height:20px;}
 .layer_wrap{position:fixed;top:0;left:0;z-index:1000;width:100%;height:100%;}
 .layer_wrap .dim{position:fixed;top:0;left:0;z-index:1001;width:100%;height:100%;}
 .alert_pop .pop_con{position:fixed;top:50%;left:50%;z-index:1002;width:100%;padding:20px;transform:translate(-50%, -50%);box-sizing:border-box;}
-.alert_pop .pop_con .inner{position:relative;min-height:190px;border-radius:20px;background-color:#fff;}
+.alert_pop .pop_con .inner{position:relative;padding:40px 20px 30px;border-radius:20px;background-color:#fff;}
 .alert_pop .pop_con .inner .txt{font-size:14px;font-weight:300;line-height:23px;text-align:center;}
 .alert_pop .btn_wrap{display:flex;align-items:center;justify-content:center;padding-top:30px;}
 .alert_pop .btn_wrap button{flex:1;}
